@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Triage Pro — Multimodal Emergency Dispatch</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="pulse-ring"></div>
+
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-icon">🚑</span>
+      <div>
+        <p class="logo-sub">EMERGENCY DISPATCH</p>
+        <h1 class="logo-title">AI TRIAGE <span class="version">PRO</span></h1>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a class="nav-link active" data-page="home" onclick="showPage('home')"><span class="nav-icon">⌂</span> HOME</a>
+      <a class="nav-link" data-page="analyze" onclick="showPage('analyze')"><span class="nav-icon">⚡</span> ANALYZE</a>
+      <a class="nav-link" data-page="dashboard" onclick="showPage('dashboard')"><span class="nav-icon">▦</span> DASHBOARD</a>
+      <a class="nav-link" data-page="patients" onclick="showPage('patients')"><span class="nav-icon">♥</span> PATIENTS</a>
+      <a class="nav-link" data-page="dispatch" onclick="showPage('dispatch')"><span class="nav-icon">◉</span> DISPATCH</a>
+      <a class="nav-link" data-page="about" onclick="showPage('about')"><span class="nav-icon">ℹ</span> ABOUT</a>
+    </div>
+    <div class="sidebar-footer">
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <span id="themeIcon">☀</span>
+        <span id="themeLabel">LIGHT MODE</span>
+      </button>
+      <div class="status-pill" id="systemStatus">
+        <span class="dot"></span> SYSTEM READY
+      </div>
+    </div>
+  </nav>
+
+  <div class="topbar">
+    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+    <span class="topbar-title">AI TRIAGE PRO</span>
+    <button class="theme-toggle-mobile" onclick="toggleTheme()"><span id="themeIconMobile">☀</span></button>
+  </div>
+
+  <main class="main-content">
+
+    <!-- HOME -->
+    <div class="page active" id="page-home">
+      <div class="hero-section">
+        <div class="hero-badge">MULTIMODAL AI SYSTEM</div>
+        <h1 class="hero-title">Emergency Triage<br><span class="accent-text">Powered by AI</span></h1>
+        <p class="hero-sub">Real-time audio transcription + computer vision fusion for instant emergency severity assessment. Whisper + CLIP + weighted fusion engine.</p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="showPage('analyze')">⚡ START ANALYSIS</button>
+          <button class="btn-ghost" onclick="showPage('dashboard')">▦ VIEW DASHBOARD</button>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-card"><p class="stat-val" id="statTotal">0</p><p class="stat-label">TOTAL CASES</p></div>
+        <div class="stat-card critical"><p class="stat-val" id="statCritical">0</p><p class="stat-label">CRITICAL</p></div>
+        <div class="stat-card stable"><p class="stat-val" id="statStable">0</p><p class="stat-label">STABLE</p></div>
+        <div class="stat-card"><p class="stat-val" id="statPatients">0</p><p class="stat-label">PATIENTS</p></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">🎙️</div><h3>Audio Intelligence</h3><p>Whisper AI transcribes emergency calls and detects 500+ medical conditions from speech with acoustic fingerprinting for voice authenticity.</p></div>
+        <div class="feature-card"><div class="feature-icon">👁️</div><h3>Vision Analysis</h3><p>CLIP zero-shot classifier assesses injury severity from photos — from minor bruises to severe trauma — with confidence scoring.</p></div>
+        <div class="feature-card"><div class="feature-icon">⚖️</div><h3>Weighted Fusion</h3><p>Trust-aware multimodal fusion engine combines audio and vision scores with dynamic weight adjustment based on signal authenticity.</p></div>
+        <div class="feature-card"><div class="feature-icon">🚑</div><h3>Instant Dispatch</h3><p>Automated priority classification triggers immediate ambulance dispatch recommendations with full audit trail and patient tracking.</p></div>
+      </div>
+    </div>
+
+    <!-- ANALYZE -->
+    <div class="page" id="page-analyze">
+      <div class="page-header">
+        <div class="panel-label">PHASE 01 — INPUT</div>
+        <h2 class="page-title">Upload Evidence</h2>
+      </div>
+
+      <div class="panel" style="margin-bottom:20px;">
+        <div class="panel-label">PATIENT DETAILS</div>
+        <div class="patient-form">
+          <div class="form-group"><label>Patient Name</label><input type="text" id="patientName" placeholder="Enter patient name..." /></div>
+          <div class="form-group"><label>Age</label><input type="number" id="patientAge" placeholder="Age" min="0" max="120" /></div>
+          <div class="form-group"><label>Location</label><input type="text" id="patientLocation" placeholder="Incident location..." /></div>
+          <div class="form-group"><label>Caller Notes</label><input type="text" id="callerNotes" placeholder="Brief description..." /></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="upload-grid">
+          <div class="upload-card" id="audioCard">
+            <div class="upload-icon">🎙️</div>
+            <p class="upload-type">AUDIO CALL</p>
+            <p class="upload-hint">MP3 / WAV / M4A</p>
+            <input type="file" id="audioInput" accept="audio/*" hidden />
+            <button class="upload-btn" onclick="document.getElementById('audioInput').click()">SELECT FILE</button>
+            <div class="record-divider"><span>OR</span></div>
+            <button class="record-btn" id="recordBtn" onclick="toggleRecording()">
+              <span class="record-dot"></span><span id="recordLabel">RECORD LIVE</span>
+            </button>
+            <div class="record-timer" id="recordTimer" style="display:none;">
+              <span class="timer-pulse"></span><span id="timerDisplay">00:00</span>
+            </div>
+            <div class="waveform-bars" id="waveformBars" style="display:none;">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <audio id="audioPlayback" controls style="display:none;width:100%;margin-top:8px;"></audio>
+            <div class="file-name" id="audioFileName">No file selected</div>
+            <div class="security-badge" id="audioBadge"></div>
+          </div>
+          <div class="upload-card" id="imageCard">
+            <div class="upload-icon">👁️</div>
+            <p class="upload-type">INJURY IMAGE</p>
+            <p class="upload-hint">JPG / PNG / WEBP</p>
+            <input type="file" id="imageInput" accept="image/*" hidden />
+            <button class="upload-btn" onclick="document.getElementById('imageInput').click()">SELECT FILE</button>
+            <div class="file-name" id="imageFileName">No file selected</div>
+            <div class="preview-box" id="imagePreview"></div>
+            <div class="security-badge" id="imageBadge"></div>
+          </div>
+        </div>
+        <button class="analyze-btn" id="analyzeBtn" onclick="runAnalysis()">
+          <span class="btn-text">⚡ RUN ANALYSIS</span>
+          <span class="btn-loader" id="btnLoader" hidden>PROCESSING...</span>
+        </button>
+      </div>
+
+      <div class="panel phase-panel" id="phasePanel" style="display:none;">
+        <div class="panel-label">PHASE 02 — PROCESSING</div>
+        <h2 class="panel-title">Live Pipeline</h2>
+        <div class="timeline">
+          <div class="timeline-step" id="step1"><div class="step-dot"></div><div class="step-content"><span class="step-name">🎙️ Acoustic Fingerprinting</span><span class="step-status" id="s1Status">PENDING</span></div></div>
+          <div class="timeline-step" id="step2"><div class="step-dot"></div><div class="step-content"><span class="step-name">📝 Whisper Transcription</span><span class="step-status" id="s2Status">PENDING</span></div></div>
+          <div class="timeline-step" id="step3"><div class="step-dot"></div><div class="step-content"><span class="step-name">🏷️ Medical Condition Lookup</span><span class="step-status" id="s3Status">PENDING</span></div></div>
+          <div class="timeline-step" id="step4"><div class="step-dot"></div><div class="step-content"><span class="step-name">👁️ CLIP Vision Analysis</span><span class="step-status" id="s4Status">PENDING</span></div></div>
+          <div class="timeline-step" id="step5"><div class="step-dot"></div><div class="step-content"><span class="step-name">⚖️ Weighted Fusion Engine</span><span class="step-status" id="s5Status">PENDING</span></div></div>
+        </div>
+        <div class="live-log" id="liveLog"></div>
+      </div>
+
+      <div class="panel results-panel" id="resultsPanel" style="display:none;">
+        <div class="panel-label">PHASE 03 — DISPATCH REPORT</div>
+        <h2 class="panel-title">Final Integrated Result</h2>
+        <div class="results-grid">
+          <div class="score-block">
+            <p class="score-label">INTEGRATED TRIAGE SCORE</p>
+            <div class="score-ring">
+              <svg viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="50"/>
+                <circle class="ring-fill" id="ringFill" cx="60" cy="60" r="50" stroke-dasharray="0 314" stroke-dashoffset="78"/>
+              </svg>
+              <div class="score-number" id="scoreNumber">—</div>
+              <div class="score-denom">/5</div>
+            </div>
+            <p class="score-severity" id="scoreSeverity">AWAITING DATA</p>
+          </div>
+          <div class="details-block">
+            <div class="detail-row"><span class="detail-icon">🎙️</span><div><p class="detail-label">AUDIO STATUS</p><p class="detail-val" id="resAudioStatus">—</p></div></div>
+            <div class="detail-row"><span class="detail-icon">👁️</span><div><p class="detail-label">VISION STATUS</p><p class="detail-val" id="resVisionStatus">—</p></div></div>
+            <div class="detail-row"><span class="detail-icon">📝</span><div><p class="detail-label">TRANSCRIPT</p><p class="detail-val transcript" id="resTranscript">—</p></div></div>
+            <div class="detail-row"><span class="detail-icon">🏷️</span><div><p class="detail-label">VISUAL CATEGORY</p><p class="detail-val" id="resVisualType">—</p></div></div>
+            <div class="detail-row"><span class="detail-icon">⚖️</span><div><p class="detail-label">TRUST WEIGHTS</p><p class="detail-val" id="resTrustWeights">—</p></div></div>
+          </div>
+        </div>
+        <div class="action-banner" id="actionBanner">
+          <span class="action-icon" id="actionIcon">🚨</span>
+          <div>
+            <p class="action-priority" id="actionPriority">—</p>
+            <p class="action-text" id="actionText">—</p>
+          </div>
+        </div>
+        <div class="result-actions">
+          <button class="btn-primary" id="dispatchBtn" onclick="openDispatchFromResult()" style="display:none;">🚑 DISPATCH AMBULANCE</button>
+          <button class="btn-secondary" onclick="saveToHistory()">💾 SAVE TO HISTORY</button>
+          <button class="reset-btn" onclick="resetSystem()">↺ NEW ANALYSIS</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="page" id="page-dashboard">
+      <div class="page-header">
+        <div class="panel-label">ANALYTICS</div>
+        <h2 class="page-title">Dashboard</h2>
+        <button class="btn-ghost btn-sm" onclick="clearHistory()">🗑 Clear All</button>
+      </div>
+      <div class="stats-row">
+        <div class="stat-card"><p class="stat-val" id="dashTotal">0</p><p class="stat-label">TOTAL CASES</p></div>
+        <div class="stat-card critical"><p class="stat-val" id="dashCritical">0</p><p class="stat-label">CRITICAL (1-2)</p></div>
+        <div class="stat-card amber-card"><p class="stat-val" id="dashModerate">0</p><p class="stat-label">MODERATE (3)</p></div>
+        <div class="stat-card stable"><p class="stat-val" id="dashStable">0</p><p class="stat-label">STABLE (4-5)</p></div>
+      </div>
+      <div class="charts-grid">
+        <div class="panel chart-panel"><div class="panel-label">SCORE DISTRIBUTION</div><canvas id="scoreChart" height="200"></canvas></div>
+        <div class="panel chart-panel"><div class="panel-label">SEVERITY BREAKDOWN</div><canvas id="severityChart" height="200"></canvas></div>
+      </div>
+      <div class="panel">
+        <div class="panel-label">ANALYSIS HISTORY</div>
+        <div class="history-table-wrap">
+          <table class="history-table">
+            <thead><tr><th>TOKEN</th><th>TIME</th><th>PATIENT</th><th>SCORE</th><th>SEVERITY</th><th>VISUAL</th><th>ACTION</th></tr></thead>
+            <tbody id="historyBody"><tr><td colspan="7" class="empty-row">No analyses yet. Run your first triage above.</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- PATIENTS -->
+    <div class="page" id="page-patients">
+      <div class="page-header">
+        <div class="panel-label">PATIENT MANAGEMENT</div>
+        <h2 class="page-title">Patient Queue</h2>
+        <button class="btn-primary btn-sm" onclick="showPage('analyze')">+ NEW PATIENT</button>
+      </div>
+      <div class="queue-filters">
+        <button class="filter-btn active" onclick="filterQueue('all', this)">ALL</button>
+        <button class="filter-btn" onclick="filterQueue('critical', this)">CRITICAL</button>
+        <button class="filter-btn" onclick="filterQueue('moderate', this)">MODERATE</button>
+        <button class="filter-btn" onclick="filterQueue('stable', this)">STABLE</button>
+        <button class="filter-btn" onclick="filterQueue('dispatched', this)">DISPATCHED</button>
+      </div>
+      <div class="patient-queue" id="patientQueue">
+        <div class="empty-state">
+          <p class="empty-icon">♥</p>
+          <p>No patients in queue. Run an analysis to add patients.</p>
+          <button class="btn-primary" onclick="showPage('analyze')">⚡ Start Analysis</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DISPATCH -->
+    <div class="page" id="page-dispatch">
+      <div class="page-header">
+        <div class="panel-label">EMERGENCY RESPONSE</div>
+        <h2 class="page-title">Dispatch Center</h2>
+      </div>
+      <div class="dispatch-grid">
+        <div class="panel dispatch-form-panel">
+          <div class="panel-label">DISPATCH REQUEST</div>
+          <div class="form-group"><label>Patient / Token</label><input type="text" id="dispatchPatient" placeholder="Patient name or token..." /></div>
+          <div class="form-group"><label>Pickup Location</label><input type="text" id="dispatchLocation" placeholder="Address or landmark..." /></div>
+          <div class="form-group"><label>Priority Level</label>
+            <select id="dispatchPriority">
+              <option value="P1">P1 — CRITICAL (Immediate)</option>
+              <option value="P2">P2 — URGENT (Within 10 min)</option>
+              <option value="P3">P3 — MODERATE (Within 30 min)</option>
+              <option value="P4">P4 — STABLE (Scheduled)</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Notes for Crew</label><textarea id="dispatchNotes" placeholder="Injury type, special requirements..." rows="3"></textarea></div>
+          <button class="analyze-btn" onclick="dispatchAmbulance()">🚑 DISPATCH AMBULANCE</button>
+        </div>
+        <div class="panel dispatch-log-panel">
+          <div class="panel-label">DISPATCH LOG</div>
+          <div class="dispatch-log" id="dispatchLog"><div class="empty-state-sm">No dispatches yet.</div></div>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:20px;">
+        <div class="panel-label">ACTIVE UNITS</div>
+        <div class="units-grid" id="unitsGrid">
+          <div class="unit-card available"><div class="unit-icon">🚑</div><p class="unit-id">AMB-01</p><p class="unit-status">AVAILABLE</p></div>
+          <div class="unit-card available"><div class="unit-icon">🚑</div><p class="unit-id">AMB-02</p><p class="unit-status">AVAILABLE</p></div>
+          <div class="unit-card available"><div class="unit-icon">🚑</div><p class="unit-id">AMB-03</p><p class="unit-status">AVAILABLE</p></div>
+          <div class="unit-card"><div class="unit-icon">🚁</div><p class="unit-id">HELI-01</p><p class="unit-status">STANDBY</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="page" id="page-about">
+      <div class="page-header">
+        <div class="panel-label">SYSTEM INFO</div>
+        <h2 class="page-title">About AI Triage Pro</h2>
+      </div>
+      <div class="about-hero panel">
+        <div class="about-logo">🚑</div>
+        <h2 class="about-title">AI Triage Pro <span class="version">v2.0</span></h2>
+        <p class="about-sub">A multimodal emergency dispatch system combining state-of-the-art speech recognition and computer vision to assist emergency responders in real-time triage decisions.</p>
+      </div>
+      <div class="about-grid">
+        <div class="panel about-card"><div class="about-card-icon">🎙️</div><h3>OpenAI Whisper</h3><p class="about-card-desc">Tiny model for efficient speech-to-text. Detects medical keywords from emergency calls with acoustic fingerprinting to identify synthetic voices.</p><div class="tech-tag">openai-whisper</div></div>
+        <div class="panel about-card"><div class="about-card-icon">👁️</div><h3>OpenAI CLIP</h3><p class="about-card-desc">Zero-shot image classification using ViT-B/32. Classifies injury severity without task-specific training — healthy skin to severe trauma.</p><div class="tech-tag">clip-vit-base-patch32</div></div>
+        <div class="panel about-card"><div class="about-card-icon">⚖️</div><h3>Fusion Engine</h3><p class="about-card-desc">Trust-aware weighted fusion combines audio and vision. Suspicious signals get reduced weight. Both-suspicious penalty shifts score up.</p><div class="tech-tag">custom weighted fusion</div></div>
+        <div class="panel about-card"><div class="about-card-icon">🐍</div><h3>Flask Backend</h3><p class="about-card-desc">Lightweight Python REST API with three endpoints. Windows-safe temp file handling with lazy model loading and full traceback logging.</p><div class="tech-tag">flask + flask-cors</div></div>
+      </div>
+      <div class="panel about-scoring">
+        <div class="panel-label">SCORING SYSTEM</div>
+        <div class="score-legend">
+          <div class="legend-item critical"><span class="legend-dot"></span><div><strong>Score 1 — CRITICAL</strong><p>Immediate life threat. Dispatch within 2 minutes.</p></div></div>
+          <div class="legend-item urgent"><span class="legend-dot"></span><div><strong>Score 2 — URGENT</strong><p>Serious condition. Priority dispatch within 10 minutes.</p></div></div>
+          <div class="legend-item moderate"><span class="legend-dot"></span><div><strong>Score 3 — MODERATE</strong><p>Needs medical attention. Non-emergency transport.</p></div></div>
+          <div class="legend-item minor"><span class="legend-dot"></span><div><strong>Score 4 — MINOR</strong><p>Minor injury. Walk-in clinic appropriate.</p></div></div>
+          <div class="legend-item stable"><span class="legend-dot"></span><div><strong>Score 5 — STABLE</strong><p>No emergency. Routine GP visit recommended.</p></div></div>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:20px;">
+        <div class="panel-label">DISCLAIMER</div>
+        <p class="disclaimer-text">AI Triage Pro is a decision-support tool only. All dispatch decisions must be validated by qualified emergency medical personnel. Do not rely solely on automated scoring for life-critical decisions.</p>
+      </div>
+    </div>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

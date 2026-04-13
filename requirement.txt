@@ -1,0 +1,8 @@
+flask
+flask-cors
+openai-whisper
+transformers
+Pillow
+librosa
+exifread
+torch

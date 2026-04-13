@@ -1,0 +1,56 @@
+
+A	B
+1	condition	score
+2	cardiac arrest	1
+3	stopped breathing	1
+4	massive hemorrhage	1
+5	unconscious	1
+6	stroke symptoms	1
+7	seizure active	1
+8	choking	1
+9	gunshot wound	1
+10	anaphylaxis	1
+11	severe trauma	1
+12	poisoning	1
+13	heart attack	1
+14	drowning	1
+15	heavy bleeding	1
+16	suicidal ideation	1
+17	chest pain	2
+18	difficulty breathing	2
+19	cant breathe	2
+20	can't breathe	2
+21	compound fracture	2
+22	high fever	2
+23	deep laceration	2
+24	severe abdominal pain	2
+25	active labor	2
+26	asthma attack	2
+27	dehydration severe	2
+28	head injury	2
+29	broken bone	2
+30	chest is paining	2
+31	dislocated joint	3
+32	persistent vomiting	3
+33	moderate burn	3
+34	fainting spell	3
+35	animal bite	3
+36	severe migraine	3
+37	allergic reaction	3
+38	sprained ankle	4
+39	minor cut	4
+40	sore throat	4
+41	mild fever	4
+42	ear ache	4
+43	insect bite	4
+44	bruised ribs	4
+45	cough and cold	5
+46	general checkup	5
+47	skin rash	5
+48	prescription refill	5
+49	flu symptoms	5
+50	medical certificate	5
+51	suture removal	5
+52	ear wax	5
+53	itchy eyes	5
+54	constipation	5
