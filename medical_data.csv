@@ -1,59 +1,4 @@
-
-A	B
-1	condition	score
-2	cardiac arrest	1
-3	stopped breathing	1
-4	massive hemorrhage	1
-5	unconscious	1
-6	stroke symptoms	1
-7	seizure active	1
-8	choking	1
-9	gunshot wound	1
-10	anaphylaxis	1
-11	severe trauma	1
-12	poisoning	1
-13	heart attack	1
-14	drowning	1
-15	heavy bleeding	1
-16	suicidal ideation	1
-17	chest pain	2
-18	difficulty breathing	2
-19	cant breathe	2
-20	can't breathe	2
-21	compound fracture	2
-22	high fever	2
-23	deep laceration	2
-24	severe abdominal pain	2
-25	active labor	2
-26	asthma attack	2
-27	dehydration severe	2
-28	head injury	2
-29	broken bone	2
-30	chest is paining	2
-31	dislocated joint	3
-32	persistent vomiting	3
-33	moderate burn	3
-34	fainting spell	3
-35	animal bite	3
-36	severe migraine	3
-37	allergic reaction	3
-38	sprained ankle	4
-39	minor cut	4
-40	sore throat	4
-41	mild fever	4
-42	ear ache	4
-43	insect bite	4
-44	bruised ribs	4
-45	cough and cold	5
-46	general checkup	5
-47	skin rash	5
-48	prescription refill	5
-49	flu symptoms	5
-50	medical certificate	5
-51	suture removal	5
-52	ear wax	5
-53	itchy eyes	5
-54	constipation	5
+condition,score
 cardiac arrest,1
 stopped breathing,1
 massive hemorrhage,1
@@ -187,6 +132,23 @@ fainting spell,3
 animal bite,3
 severe migraine,3
 allergic reaction,3
+sprained ankle,4
+minor cut,4
+sore throat,4
+mild fever,4
+ear ache,4
+insect bite,4
+bruised ribs,4
+cough and cold,5
+general checkup,5
+skin rash,5
+prescription refill,5
+flu symptoms,5
+medical certificate,5
+suture removal,5
+ear wax,5
+itchy eyes,5
+constipation,5
 acute pancreatitis,3
 urinary tract infection severe,3
 kidney infection,3
@@ -300,13 +262,6 @@ psychiatric emergency,3
 panic attack severe,3
 psychosis acute,3
 self harm wound,3
-sprained ankle,4
-minor cut,4
-sore throat,4
-mild fever,4
-ear ache,4
-insect bite,4
-bruised ribs,4
 sprained wrist,4
 minor burn,4
 minor laceration,4
@@ -339,6 +294,46 @@ corn on foot,4
 ingrown toenail,4
 ingrown nail,4
 nail infection,4
+routine vaccination,5
+annual physical,5
+blood pressure check,5
+blood sugar check,5
+cholesterol check,5
+BMI assessment,5
+vision screening,5
+hearing screening,5
+dental checkup,5
+cancer screening,5
+pap smear,5
+mammogram,5
+prostate check,5
+thyroid check,5
+vitamin deficiency,5
+iron deficiency,5
+mild anemia,5
+allergy testing,5
+food allergy consultation,5
+nutritional counseling,5
+weight management,5
+smoking cessation,5
+mental health consultation,5
+follow up appointment,5
+post surgery follow up,5
+wound check,5
+dressing change,5
+stitch removal,5
+cast check,5
+physiotherapy referral,5
+lab result review,5
+scan result review,5
+X-ray result,5
+MRI result review,5
+CT scan result,5
+ultrasound result,5
+biopsy result,5
+health certificate,5
+medical report request,5
+specialist referral,5
 minor eye irritation,4
 eye redness,4
 eye strain,4
@@ -430,51 +425,8 @@ stress symptoms,4
 mild depression,4
 sleep difficulty,4
 insomnia mild,4
-cough and cold,5
-general checkup,5
-skin rash,5
-prescription refill,5
-flu symptoms,5
-medical certificate,5
-suture removal,5
-ear wax,5
-itchy eyes,5
-constipation,5
-routine vaccination,5
-annual physical,5
-blood pressure check,5
-blood sugar check,5
-cholesterol check,5
-BMI assessment,5
-vision screening,5
-hearing screening,5
-dental checkup,5
-cancer screening,5
-pap smear,5
-mammogram,5
-prostate check,5
-thyroid check,5
-vitamin deficiency,5
-iron deficiency,5
-mild anemia,5
-mild hypothyroidism,5
-mild hyperthyroidism,5
-allergy testing,5
-food allergy consultation,5
-nutritional counseling,5
-weight management,5
-smoking cessation,5
-alcohol counseling,5
-mental health consultation,5
 therapy referral,5
 counseling session,5
-follow up appointment,5
-post surgery follow up,5
-wound check,5
-dressing change,5
-stitch removal,5
-cast check,5
-physiotherapy referral,5
 occupational therapy,5
 speech therapy referral,5
 hearing aid fitting,5
@@ -538,19 +490,9 @@ prescription change,5
 dosage adjustment,5
 generic drug query,5
 pharmacy query,5
-lab result review,5
-scan result review,5
-X-ray result,5
-MRI result review,5
-CT scan result,5
-ultrasound result,5
-biopsy result,5
 test result discussion,5
-health certificate,5
-medical report request,5
 records transfer,5
 referral letter,5
-specialist referral,5
 dermatology referral,5
 cardiology referral,5
 neurology referral,5
