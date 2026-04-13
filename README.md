@@ -58,7 +58,7 @@ The system was designed to assist emergency responders in triage decisions — r
 ├───────────────────────┬─────────────────────────────────┤
 │   AUDIO PIPELINE      │      VISION PIPELINE            │
 │                       │                                 │
-│  📞 Emergency Call    │   📸 Injury Photo               │
+│  📞 Emergency Call    │   📸 Injury Photo              │
 │       ↓               │        ↓                        │
 │  Acoustic             │   EXIF Metadata                 │
 │  Fingerprinting       │   Authenticity Check            │
@@ -70,24 +70,24 @@ The system was designed to assist emergency responders in triage decisions — r
 │  Condition Lookup     │   Classification (Round B)      │
 │       ↓               │        ↓                        │
 │  Audio Score (1–5)    │   Vision Score (1–5)            │
-└───────────┬───────────┴──────────────┬──────────────────┘
-            │                          │
-            └──────────┬───────────────┘
-                       ↓
-          ┌────────────────────────┐
-          │   WEIGHTED FUSION      │
-          │   ENGINE (app.py)      │
-          │                        │
-          │  Trust Weights Applied │
-          │  Suspicious Penalty    │
-          │  Final Score (1–5)     │
-          └────────────┬───────────┘
-                       ↓
-          ┌────────────────────────┐
-          │   DISPATCH DECISION    │
-          │  P1 → Immediate AMB    │
-          │  P2–P5 → Walk-in/GP   │
-          └────────────────────────┘
+└─────────────┬─────────┴────────────────┬────────────────┘
+              │                          │
+              └────────────┬─────────────┘
+                           ↓
+               ┌────────────────────────┐
+               │   WEIGHTED FUSION      │
+               │   ENGINE (app.py)      │
+               │                        │
+               │  Trust Weights Applied │
+               │  Suspicious Penalty    │
+               │  Final Score (1–5)     │
+               └───────────┬────────────┘
+                           ↓
+               ┌────────────────────────┐
+               │   DISPATCH DECISION    │
+               │  P1 → Immediate AMB    │
+               │  P2–P5 → Walk-in/GP    │
+               └────────────────────────┘
 ```
 
 ---
