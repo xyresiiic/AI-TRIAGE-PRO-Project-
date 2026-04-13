@@ -139,8 +139,8 @@ ai-triage-pro/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/ai-triage-pro.git
-cd ai-triage-pro
+git clone https://github.com/xyresiiic/AI-TRIAGE-PRO-Project-.git
+cd AI-TRIAGE-PRO-Project-
 
 # 2. Install dependencies
 pip install -r requirement.txt
@@ -228,15 +228,19 @@ POST /api/analyze/fuse
 
 ## 📸 Screenshots
 
-| Home | Analyze | Results |
-|------|---------|---------|
-| ![Home](screenshots/home.png) | ![Analyze](screenshots/analyze.png) | ![Results](screenshots/results.png) |
+| Home | Analyze |
+|------|---------|
+| ![Home](screenshots/s1.png) | ![Analyze](screenshots/s2.png) |
 
-| Dispatch Center | About |
-|-----------------|-------|
-| ![Dispatch](screenshots/dispatch.png) | ![About](screenshots/about.png) |
+| Live Pipeline & Results | Dispatch Center |
+|------------------------|-----------------|
+| ![Results](screenshots/s3.png) | ![Dispatch](screenshots/s4.png) |
 
-> Add your screenshots to a `/screenshots` folder and update paths above.
+| About |
+|-------|
+| ![About](screenshots/s5.png) |
+
+> Screenshots are located in the `/screenshots` folder of this repo.
 
 ---
 
@@ -244,12 +248,12 @@ POST /api/analyze/fuse
 
 Built with 🔥 at **HackNexus 2.0** — *24 hours, 4 people, 1 mission.*
 
-| Name | Role |
-|------|------|
-| **Veer Singh** | Lead Developer & UI/UX |
-| **Poorvangika Kanwar** | Team Member |
-| **Shivam Maurya** | Team Member |
-| **Suman Vyas** | Team Member |
+| Name | Role | GitHub |
+|------|------|--------|
+| **Veer Pratap Singh** | UI/UX & Design | [@xyresiiic](https://github.com/xyresiiic) |
+| **Poorvangika Kanwar** | Backend, AI Training & Presentation | [@POORVANGIKA](https://github.com/POORVANGIKA) |
+| **Shivam Maurya** | Frontend & Website | [@scriptedbyshivam](https://github.com/scriptedbyshivam) |
+| **Suman Vyas** | Research & Presentation | — |
 
 ---
 
