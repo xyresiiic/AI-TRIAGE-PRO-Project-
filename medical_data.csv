@@ -54,3 +54,531 @@ A	B
 52	ear wax	5
 53	itchy eyes	5
 54	constipation	5
+cardiac arrest,1
+stopped breathing,1
+massive hemorrhage,1
+unconscious,1
+stroke symptoms,1
+seizure active,1
+choking,1
+gunshot wound,1
+anaphylaxis,1
+severe trauma,1
+poisoning,1
+heart attack,1
+drowning,1
+heavy bleeding,1
+suicidal ideation,1
+not breathing,1
+pulse stopped,1
+unresponsive,1
+electric shock,1
+hanging,1
+overdose,1
+drug overdose,1
+severe allergic shock,1
+aortic rupture,1
+respiratory arrest,1
+cardiac failure,1
+blunt head trauma,1
+severe internal bleeding,1
+stab wound,1
+arterial bleeding,1
+severe burn full body,1
+eclampsia,1
+spinal cord injury,1
+crush injury,1
+near drowning,1
+complete airway obstruction,1
+multiple trauma,1
+explosive injury,1
+major hemorrhage,1
+peripartum collapse,1
+loss of consciousness,1
+brain hemorrhage,1
+collapsed lung,1
+septic shock,1
+status epilepticus,1
+tension pneumothorax,1
+coma,1
+femoral artery cut,1
+throat cut,1
+attempted suicide,1
+chest pain,2
+difficulty breathing,2
+cant breathe,2
+can't breathe,2
+compound fracture,2
+high fever,2
+deep laceration,2
+severe abdominal pain,2
+active labor,2
+asthma attack,2
+dehydration severe,2
+head injury,2
+broken bone,2
+chest is paining,2
+dislocated shoulder,2
+severe chest tightness,2
+premature labor,2
+kidney stone pain,2
+gallbladder attack,2
+blood in stool,2
+blood in urine,2
+vomiting blood,2
+coughing blood,2
+sudden vision loss,2
+sudden hearing loss,2
+facial drooping,2
+arm weakness sudden,2
+slurred speech sudden,2
+confusion sudden,2
+meningitis symptoms,2
+severe dehydration,2
+diabetic ketoacidosis,2
+hypoglycemia severe,2
+hyperglycemia severe,2
+severe infection,2
+high blood pressure crisis,2
+hypertensive emergency,2
+severe burn,2
+toxic ingestion,2
+severe headache sudden,2
+thunderclap headache,2
+abdominal rigidity,2
+appendicitis suspected,2
+ectopic pregnancy,2
+miscarriage active,2
+placental abruption,2
+preterm labor,2
+fetal distress,2
+pediatric seizure,2
+child not breathing,2
+infant choking,2
+newborn breathing issue,2
+severe allergic reaction,2
+deep eye injury,2
+penetrating eye wound,2
+chemical eye exposure,2
+chemical burn,2
+amputation traumatic,2
+bone fracture severe,2
+pelvic fracture,2
+skull fracture,2
+rib fracture multiple,2
+pulmonary embolism,2
+acute asthma,2
+COPD exacerbation,2
+heart failure acute,2
+arrhythmia severe,2
+atrial fibrillation new onset,2
+stroke confirmed,2
+mini stroke TIA,2
+high altitude sickness severe,2
+snake bite,2
+scorpion sting severe,2
+spider bite severe,2
+foreign body airway,2
+foreign body esophagus,2
+dislocated joint,3
+persistent vomiting,3
+moderate burn,3
+fainting spell,3
+animal bite,3
+severe migraine,3
+allergic reaction,3
+acute pancreatitis,3
+urinary tract infection severe,3
+kidney infection,3
+pneumonia,3
+cellulitis spreading,3
+abscess large,3
+fever above 103,3
+fever with rash,3
+rash spreading rapidly,3
+joint swelling severe,3
+back pain severe acute,3
+sciatica severe,3
+eye infection severe,3
+ear infection severe,3
+sinus infection severe,3
+tooth abscess,3
+dental pain severe,3
+jaw pain severe,3
+neck stiffness with fever,3
+frequent fainting,3
+palpitations,3
+irregular heartbeat,3
+dizziness severe,3
+vertigo severe,3
+nausea persistent,3
+dehydration moderate,3
+bloody diarrhea,3
+severe diarrhea,3
+rectal bleeding,3
+abdominal cramps severe,3
+hernia pain,3
+testicular pain severe,3
+ovarian cyst pain,3
+pelvic pain severe,3
+vaginal bleeding abnormal,3
+post-surgery wound infection,3
+suture site infected,3
+diabetic foot ulcer,3
+leg ulcer infected,3
+pressure sore severe,3
+burn second degree,3
+burn blister large,3
+frostbite moderate,3
+hypothermia moderate,3
+heatstroke,3
+heat exhaustion,3
+concussion,3
+head contusion,3
+whiplash severe,3
+wrist fracture,3
+ankle fracture,3
+toe fracture,3
+finger fracture,3
+hand injury,3
+foot injury,3
+knee injury severe,3
+shoulder dislocation,3
+elbow dislocation,3
+hip pain severe,3
+chest wall pain,3
+costochondritis,3
+pleurisy,3
+bronchitis severe,3
+whooping cough,3
+croup severe,3
+epiglottitis,3
+laryngitis severe,3
+throat abscess,3
+tonsil abscess,3
+eye swelling severe,3
+pink eye severe,3
+corneal abrasion,3
+corneal ulcer,3
+retinal detachment suspected,3
+glaucoma acute,3
+iritis,3
+foreign body eye,3
+earache severe,3
+ear drum rupture,3
+hearing loss sudden,3
+nose bleed severe,3
+nose fracture,3
+lip laceration,3
+tongue laceration,3
+facial laceration deep,3
+scalp laceration,3
+hand laceration deep,3
+foot laceration deep,3
+dog bite deep,3
+cat bite infected,3
+human bite,3
+bee sting multiple,3
+wasp sting multiple,3
+jellyfish sting severe,3
+rash allergic severe,3
+hives widespread,3
+contact dermatitis severe,3
+shingles outbreak,3
+chickenpox severe adult,3
+measles,3
+dengue fever,3
+malaria suspected,3
+typhoid fever,3
+food poisoning moderate,3
+alcohol poisoning,3
+carbon monoxide exposure,3
+medication reaction,3
+drug interaction severe,3
+withdrawal symptoms,3
+psychiatric emergency,3
+panic attack severe,3
+psychosis acute,3
+self harm wound,3
+sprained ankle,4
+minor cut,4
+sore throat,4
+mild fever,4
+ear ache,4
+insect bite,4
+bruised ribs,4
+sprained wrist,4
+minor burn,4
+minor laceration,4
+mild headache,4
+tension headache,4
+migraine mild,4
+neck pain,4
+shoulder pain,4
+back pain mild,4
+knee pain,4
+hip pain mild,4
+elbow pain,4
+wrist pain,4
+ankle pain,4
+foot pain,4
+toe pain,4
+finger pain,4
+joint pain mild,4
+muscle pain,4
+muscle cramp,4
+pulled muscle,4
+tennis elbow,4
+golfers elbow,4
+carpal tunnel,4
+shin splints,4
+plantar fasciitis,4
+heel pain,4
+callus,4
+corn on foot,4
+ingrown toenail,4
+ingrown nail,4
+nail infection,4
+minor eye irritation,4
+eye redness,4
+eye strain,4
+eye twitching,4
+stye,4
+chalazion,4
+dry eyes,4
+ear wax mild,4
+ear itching,4
+mild ear infection,4
+runny nose,4
+stuffy nose,4
+nasal congestion,4
+mild nosebleed,4
+mild sore throat,4
+throat irritation,4
+dry throat,4
+mild toothache,4
+tooth sensitivity,4
+gum irritation,4
+mouth ulcer,4
+canker sore,4
+cold sore,4
+lip blister,4
+minor rash,4
+skin irritation,4
+eczema flare mild,4
+psoriasis flare mild,4
+acne severe,4
+boil small,4
+pimple infected,4
+ingrown hair,4
+razor burn,4
+sunburn mild,4
+windburn,4
+chapped lips,4
+dry skin,4
+itchy skin,4
+hives mild,4
+bug bite mild,4
+tick bite,4
+flea bite,4
+mosquito bite,4
+bee sting single,4
+wasp sting single,4
+ant bite,4
+minor swelling,4
+bruise,4
+contusion,4
+splinter,4
+blister,4
+mild nausea,4
+indigestion,4
+heartburn,4
+acid reflux mild,4
+bloating,4
+gas pain,4
+constipation mild,4
+diarrhea mild,4
+stomach cramps mild,4
+appetite loss,4
+weight loss unexplained mild,4
+fatigue mild,4
+tiredness,4
+mild dizziness,4
+lightheadedness,4
+mild palpitations,4
+shortness of breath mild,4
+mild cough,4
+mild wheezing,4
+mild chest discomfort,4
+mild back stiffness,4
+mild joint stiffness,4
+mild swollen lymph nodes,4
+night sweats mild,4
+hot flashes,4
+menstrual cramps,4
+PMS symptoms,4
+vaginal discharge abnormal,4
+urinary frequency,4
+urinary urgency,4
+mild urinary burning,4
+erectile dysfunction,4
+testicular discomfort,4
+breast tenderness,4
+nipple discharge,4
+mild anxiety,4
+stress symptoms,4
+mild depression,4
+sleep difficulty,4
+insomnia mild,4
+cough and cold,5
+general checkup,5
+skin rash,5
+prescription refill,5
+flu symptoms,5
+medical certificate,5
+suture removal,5
+ear wax,5
+itchy eyes,5
+constipation,5
+routine vaccination,5
+annual physical,5
+blood pressure check,5
+blood sugar check,5
+cholesterol check,5
+BMI assessment,5
+vision screening,5
+hearing screening,5
+dental checkup,5
+cancer screening,5
+pap smear,5
+mammogram,5
+prostate check,5
+thyroid check,5
+vitamin deficiency,5
+iron deficiency,5
+mild anemia,5
+mild hypothyroidism,5
+mild hyperthyroidism,5
+allergy testing,5
+food allergy consultation,5
+nutritional counseling,5
+weight management,5
+smoking cessation,5
+alcohol counseling,5
+mental health consultation,5
+therapy referral,5
+counseling session,5
+follow up appointment,5
+post surgery follow up,5
+wound check,5
+dressing change,5
+stitch removal,5
+cast check,5
+physiotherapy referral,5
+occupational therapy,5
+speech therapy referral,5
+hearing aid fitting,5
+contact lens issue,5
+glasses prescription,5
+travel vaccination,5
+flu shot,5
+covid booster,5
+hepatitis vaccine,5
+rabies vaccine,5
+tetanus booster,5
+meningitis vaccine,5
+HPV vaccine,5
+childhood vaccine,5
+immunization record,5
+birth control consultation,5
+contraception advice,5
+fertility consultation,5
+pregnancy confirmation,5
+prenatal checkup,5
+antenatal care,5
+postnatal checkup,5
+newborn checkup,5
+pediatric growth check,5
+child development assessment,5
+school medical form,5
+sports fitness certificate,5
+work fitness certificate,5
+driver medical,5
+insurance medical,5
+immigration medical,5
+disability assessment,5
+chronic disease management,5
+diabetes monitoring,5
+hypertension monitoring,5
+asthma review,5
+COPD review,5
+arthritis management,5
+osteoporosis check,5
+kidney function test,5
+liver function test,5
+thyroid function test,5
+hormone level check,5
+STI screening,5
+HIV testing,5
+hepatitis screening,5
+TB screening,5
+malaria prophylaxis,5
+travel health advice,5
+sleep apnea follow up,5
+CPAP review,5
+pacemaker check,5
+stent follow up,5
+dialysis follow up,5
+chemotherapy review,5
+radiation therapy follow up,5
+surgical consultation,5
+second opinion request,5
+medication review,5
+prescription change,5
+dosage adjustment,5
+generic drug query,5
+pharmacy query,5
+lab result review,5
+scan result review,5
+X-ray result,5
+MRI result review,5
+CT scan result,5
+ultrasound result,5
+biopsy result,5
+test result discussion,5
+health certificate,5
+medical report request,5
+records transfer,5
+referral letter,5
+specialist referral,5
+dermatology referral,5
+cardiology referral,5
+neurology referral,5
+orthopedic referral,5
+gynecology referral,5
+urology referral,5
+ENT referral,5
+ophthalmology referral,5
+psychiatry referral,5
+endocrinology referral,5
+gastroenterology referral,5
+pulmonology referral,5
+rheumatology referral,5
+oncology referral,5
+hematology referral,5
+nephrology referral,5
+infectious disease referral,5
+geriatric assessment,5
+elderly care consultation,5
+memory assessment,5
+cognitive test,5
+balance assessment,5
+fall risk assessment,5
+home care request,5
+palliative care consultation,5
+hospice referral,5
+diet plan consultation,5
+exercise advice,5
+wellness consultation,5
+preventive health advice,5
+health education,5
